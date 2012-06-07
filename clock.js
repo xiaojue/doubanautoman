@@ -14,7 +14,7 @@ exports.start = function(accessObject) {
 				msg.push(timeTxt);
 			}
 			msg = msg.join('! ');
-            var sometxt = ['咳咳~','好累噢~','酸了- -||','疼！','无聊…','想爆大笨重的菊~','谁来陪陪我'];
+            var sometxt = ['咳咳~','好累噢~','酸了- -||','疼！','无聊…','想爆大笨钟的菊~','谁来陪陪我'];
             msg = msg +'! '+ sometxt[Math.floor(Math.random()*sometxt.length)];
 			mysay.say(msg, function(ret) {
 				//console.log(ret);
