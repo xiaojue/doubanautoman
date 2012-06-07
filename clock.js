@@ -9,12 +9,15 @@ exports.start = function(accessObject) {
 		timeTxt = '啪',
 		msg = [];
 		if (Minutes === 0) {
+            Hours = Hours < 12 ? Hours : Hours - 12;
 			for (var i = 0; i < Hours; i++) {
 				msg.push(timeTxt);
 			}
-			msg = msg.join('~!');
+			msg = msg.join('! ');
+            var sometxt = ['咳咳~','好累噢~','酸了- -||','疼！','无聊…','想爆大笨重的菊~','谁来陪陪我'];
+            msg = msg +'! '+ sometxt[Math.floor(Math.random()*sometxt.length)];
 			mysay.say(msg, function(ret) {
-				console.log(ret);
+				//console.log(ret);
 			});
 		}
 	},
