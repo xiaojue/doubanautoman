@@ -12,7 +12,7 @@ exports.start = function(accessObject) {
 			for (var i = 0; i < Hours; i++) {
 				msg.push(timeTxt);
 			}
-			msg = msg.join(',');
+			msg = msg.join('~!');
 			mysay.say(msg, function(ret) {
 				console.log(ret);
 			});
