@@ -36,7 +36,7 @@ say.prototype.say = function(msg, callback) {
 	oauth_header += data.parameters.oauth_token;
 
 	var request_body = "<entry xmlns:ns0=\"http://www.w3.org/2005/Atom\" xmlns:db=\"http://www.douban.com/xmlns/\">";
-	request_body += "<content>"+msg+"</content>";
+	request_body += "<content>" + msg + "</content>";
 	request_body += "</entry>";
 
 	var post_req = http.request({
@@ -46,7 +46,7 @@ say.prototype.say = function(msg, callback) {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/atom+xml',
-            'Content-Length':Buffer.byteLength(request_body,'utf8'),
+			'Content-Length': Buffer.byteLength(request_body, 'utf8'),
 			'Authorization': oauth_header
 		}
 	},
